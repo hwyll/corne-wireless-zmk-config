@@ -74,28 +74,28 @@
         };
 
         // HJ = [
-        jk_lbkt {
+        kl_lbkt {
             timeout-ms = <50>;
-            key-positions = <19 20>;
+            key-positions = <20 21>;
             bindings = <&kp LBKT>;
         };
         // KL = ]
-        kl_rbkt {
+        l;_rbkt {
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            key-positions = <21 22>;
             bindings = <&kp RBKT>;
         };
 
         // NM = {
-        m,_lbrc {
+        ,._lbrc {
             timeout-ms = <50>;
-            key-positions = <31 32>;
+            key-positions = <32 33>;
             bindings = <&kp LBKT>;
         };
         // ,. = }
-        ,._rbrc {
+        ./_rbrc {
             timeout-ms = <50>;
-            key-positions = <32 33>;
+            key-positions = <33 34>;
             bindings = <&kp RBKT>;
         };
 
@@ -160,7 +160,7 @@
         adjs {
             // -----------------------------------------------------------------------------------------
             // |         |     |     |     |     |     |        | BT1 | BT2 | BT3 | BT4 | BT5 | BT_CLR |
-            // |         |     |     |     |     |     |        |  PP |VOLUP|VOLDN|MUTE |     |        |      
+            // |         |     |     |     |     |     |        |     |     |     |     |     |        |      
             // |         |     |     |     |     |     |        |     |     |     |     |     |        |
             //                       |     |     |     |        |     |     |     |
 
