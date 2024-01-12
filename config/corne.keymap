@@ -9,14 +9,14 @@
 #include <dt-bindings/zmk/keys.h>
 
 // Higher number layers take precedence and override below
-#define BASE 0
+#define DFLT 0
 
 // Custom layers (i.e. task specific)
 #define RNAVI 1
 #define LNAVI 2
 
-// Layers which should always be accessible (i.e. num, navi, adjs)
-#define DFLT 3 // same as base, used to override base onto custom layers
+// Base layers which should always be accessible (i.e. num, navi, adjs)
+#define BASE 3 // same as DFLT except for thumbs, used to override DFLT keys onto custom layers
 #define NUMS 4 // numbers layer - numbers, symbols
 #define NAVI 5 // navigation layer - arrow keys, media controls
 #define ADJS 6 // adjustment layer - layer, bt controls
@@ -119,9 +119,9 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // base layer
+        // default layer
 
-        base {
+        dflt {
             // ------------------------------------------------------------------------------------------
             // |      TAB|  Q  |  W  |  E  |  R  |  T  |        |  Y  |  U  |  I  |  O  |  P  | BSPC    |
             // |     SHFT|  A  |  S  |  D  |  F  |  G  |        |  H  |  J  |  K  |  L  |  ;  |  '      |
@@ -169,9 +169,9 @@
             >;
         };
 
-        // default layers
+        // base layers
 
-        dflt {
+        base {
             // ------------------------------------------------------------------------------------------
             // |      TAB|  Q  |  W  |  E  |  R  |  T  |        |  Y  |  U  |  I  |  O  |  P  | BSPC    |
             // |     SHFT|  A  |  S  |  D  |  F  |  G  |        |  H  |  J  |  K  |  L  |  ;  |  '      |
