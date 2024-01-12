@@ -119,7 +119,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // base layers
+        // base layer
 
         base {
             // ------------------------------------------------------------------------------------------
@@ -135,6 +135,41 @@
                              &kp LALT  &kp LGUI  &lt NUMS SPACE        &lt NAVI RET  &td_caps  &td_gresc
             >;
         };
+
+        // custom layers
+
+
+        rnavi {
+            // -----------------------------------------------------------------------------------------
+            // |         |     |     |     |     |     |        |     |     | UP  |     |     |        |
+            // |         |     |     |     |     |     |        |     | LFT | DWN | RGT |     |        |      
+            // |         |     |     |     |     |     |        |     |     |     |     |     |        |
+            //                       |     |     |     |        |     |     |     |
+
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans    &kp UP    &trans     &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans    &trans    &trans     &trans  &trans
+                                        &trans  &trans  &trans        &trans  &trans    &lt BASE ESC
+            >;
+        };
+
+        lnavi {
+            // -----------------------------------------------------------------------------------------
+            // |         |     | UP  |     |     |     |        |     |     |     |     |     |        |
+            // |         | LFT | DWN | RGT |     |     |        |     |     |     |     |     |        |      
+            // |         |     |     |     |     |     |        |     |     |     |     |     |        |
+            //                       |     |     |     |        |     |     |     |
+
+            bindings = <
+                &trans  &trans    &kp UP    &trans     &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans    &trans    &trans     &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                                            &trans     &trans  &trans        &trans  &trans  &lt BASE ESC
+            >;
+        };
+
+        // default layers
 
         dflt {
             // ------------------------------------------------------------------------------------------
@@ -197,37 +232,6 @@
         };
 
 
-        // custom layers
-
-
-        rnavi {
-            // -----------------------------------------------------------------------------------------
-            // |         |     |     |     |     |     |        |     |     | UP  |     |     |        |
-            // |         |     |     |     |     |     |        |     | LFT | DWN | RGT |     |        |      
-            // |         |     |     |     |     |     |        |     |     |     |     |     |        |
-            //                       |     |     |     |        |     |     |     |
-
-            bindings = <
-                &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans    &kp UP    &trans     &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans    &trans    &trans     &trans  &trans
-                                        &trans  &trans  &trans        &trans  &trans    &lt BASE ESC
-            >;
-        };
-
-        lnavi {
-            // -----------------------------------------------------------------------------------------
-            // |         |     | UP  |     |     |     |        |     |     |     |     |     |        |
-            // |         | LFT | DWN | RGT |     |     |        |     |     |     |     |     |        |      
-            // |         |     |     |     |     |     |        |     |     |     |     |     |        |
-            //                       |     |     |     |        |     |     |     |
-
-            bindings = <
-                &trans  &trans    &kp UP    &trans     &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans    &trans    &trans     &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
-                                            &trans     &trans  &trans        &trans  &trans  &lt BASE ESC
-            >;
-        };
+    
     };
 };
