@@ -13,7 +13,8 @@
 #define NUMS 1
 #define NAVI 2
 #define ADJS 3
-#define MS 4
+#define RNAVI 4
+#define LNAVI 5
 
 / {
 
@@ -160,31 +161,46 @@
 
         adjs {
             // -----------------------------------------------------------------------------------------
-            // |         | MS  |     |     |     |     |        | BT1 | BT2 | BT3 | BT4 | BT5 | BT_CLR |
+            // |         |LNAVI|RNAVI|     |     | BASE|        | BT1 | BT2 | BT3 | BT4 | BT5 | BT_CLR |
             // |         |     |     |     |     |     |        |     |     |     |     |     |        |      
             // |         |     |     |     |     |     |        |     |     |     |     |     |        |
             //                       |     |     |     |        |     |     |     |
 
             bindings = <
-                &trans  &tog MS  &trans  &trans  &trans  &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-                &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans        &trans
-                &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans        &trans
-                                        &trans  &trans  &trans        &trans  &trans  &trans
+                &trans  &to LNAVI  &to RNAVI  &trans  &trans  &to BASE      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+                &trans  &trans     &trans     &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans        &trans
+                &trans  &trans     &trans     &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans        &trans
+                                              &trans  &trans  &trans        &trans  &trans  &trans
             >;
         };
 
-        ms {
+        rnavi {
             // -----------------------------------------------------------------------------------------
             // |         |     |     |     |     |     |        |     |     | UP  |     |     |        |
             // |         |     |     |     |     |     |        |     | LFT | DWN | RGT |     |        |      
             // |         |     |     |     |     |     |        |     |     |     |     |     |        |
-            //                       |     |     |     |        |     |     | BASE ENT |
+            //                       |     |     |     |        |     |     |     |
 
             bindings = <
                 &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans    &kp UP    &trans     &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans    &trans    &trans     &trans  &trans
-                                        &trans  &trans  &trans        &trans  &trans    &lt BASE ESC
+                                        &trans  &trans  &trans        &trans  &trans    &trans
+            >;
+        };
+
+        lnavi {
+            // -----------------------------------------------------------------------------------------
+            // |         |     | UP  |     |     |     |        |     |     |     |     |     |        |
+            // |         | LFT | DWN | RGT |     |     |        |     |     |     |     |     |        |      
+            // |         |     |     |     |     |     |        |     |     |     |     |     |        |
+            //                       |     |     |     |        |     |     |     |
+
+            bindings = <
+                &trans  &trans    &kp UP    &trans     &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans    &trans    &trans     &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                                            &trans     &trans  &trans        &trans  &trans  &trans
             >;
         };
     };
