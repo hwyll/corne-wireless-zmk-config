@@ -16,10 +16,10 @@
 #define LNAVI 2
 
 // Layers which should always be accessible (i.e. num, navi, adjs)
-#define DFLT 10 // same as base, used to override base onto custom layers
-#define NUMS 11 // numbers layer - numbers, symbols
-#define NAVI 12 // navigation layer - arrow keys, media controls
-#define ADJS 13 // adjustment layer - layer, bt controls
+#define DFLT 3 // same as base, used to override base onto custom layers
+#define NUMS 4 // numbers layer - numbers, symbols
+#define NAVI 5 // navigation layer - arrow keys, media controls
+#define ADJS 6 // adjustment layer - layer, bt controls
 
 / {
 
@@ -111,8 +111,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <11 12>;
-            then-layer = <13>;
+            if-layers = <3 5>;
+            then-layer = <6>;
         };
     };
 
