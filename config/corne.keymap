@@ -111,15 +111,15 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        // navi + nums = adjs
-        navi_nums_adjs_layer {
+        // nums + navi = adjs
+        nums_navi_adjs_layer {
             if-layers = <4 5>;
             then-layer = <6>;
         };
 
         // default + nums = adjs
         dflt_nums_adjs_layer {
-            if-layers = <3 5>;
+            if-layers = <3 4>;
             then-layer = <6>;
         };
     };
