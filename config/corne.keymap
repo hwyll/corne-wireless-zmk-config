@@ -23,6 +23,22 @@
 
 / {
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        // nums + navi = adjs
+        nums_navi_adjs_layer {
+            if-layers = <4 5>;
+            then-layer = <6>;
+        };
+
+        // default + nums = adjs
+        dflt_nums_adjs_layer {
+            if-layers = <3 4>;
+            then-layer = <6>;
+        };
+    };
+
     // Tap Dance
     behaviors {
         // double-tap LSHIFT to turn on CAPS WORD
@@ -106,22 +122,6 @@
             bindings = <&kp RBKT>;
         };
 
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        // nums + navi = adjs
-        nums_navi_adjs_layer {
-            if-layers = <NUMS NAVI>;
-            then-layer = <ADJS>;
-        };
-
-        // default + nums = adjs
-        dflt_nums_adjs_layer {
-            if-layers = <NUMS DFLT>;
-            then-layer = <ADJS>;
-        };
     };
 
     keymap {
