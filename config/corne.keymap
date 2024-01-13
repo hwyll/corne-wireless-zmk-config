@@ -28,14 +28,14 @@
 
         // nums + navi = adjs
         nums_navi_adjs_layer {
-            if-layers = <4 5>;
-            then-layer = <6>;
+            if-layers = <NUMS NAVI>;
+            then-layer = <ADJS>;
         };
 
         // default + nums = adjs
         dflt_nums_adjs_layer {
-            if-layers = <3 4>;
-            then-layer = <6>;
+            if-layers = <NUMS BASE>;
+            then-layer = <ADJS>;
         };
     };
 
