@@ -32,8 +32,8 @@
             then-layer = <ADJS>;
         };
 
-        // default + nums = adjs
-        dflt_nums_adjs_layer {
+        // nums + base = adjs
+        nums_base_adjs_layer {
             if-layers = <NUMS BASE>;
             then-layer = <ADJS>;
         };
