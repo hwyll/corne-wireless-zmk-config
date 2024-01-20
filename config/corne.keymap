@@ -113,13 +113,13 @@
         lbrc {
             timeout-ms = <50>;
             key-positions = <32 33>;
-            bindings = <&kp LBKT>;
+            bindings = <&kp LBRC>;
         };
         // ./ = }
         rbrc {
             timeout-ms = <50>;
             key-positions = <33 34>;
-            bindings = <&kp RBKT>;
+            bindings = <&kp RBRC>;
         };
 
     };
