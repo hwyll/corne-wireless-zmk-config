@@ -17,7 +17,7 @@
 
 // Base layers which should always be accessible (i.e. num, nav, sys)
 #define BASE 3 // same as DFLT except for thumbs, used to override DFLT keys onto custom layers
-#define NUM 4 // numbers layer - numbers, symbols
+#define NUM 4 // numbers layer - numbers, symbols, function keys
 #define NAV 5 // navigation layer - arrow keys, media controls
 #define SYS 6 // system layer - toggle layer, bt controls
 
